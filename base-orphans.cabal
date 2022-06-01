@@ -58,6 +58,9 @@ library
       Data.Orphans.Prelude
   default-language: Haskell2010
 
+  if impl(ghc >= 9.0.3)
+       default-extensions: PartialTypeConstructors
+
 test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
